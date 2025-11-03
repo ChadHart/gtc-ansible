@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: true
+  become: true
+
+  tasks:
+    - name: Upgrade all packages to their latest version
+      ansible.builtin.apt:
+        name: "*" 
+        state: present
+        upgrade: yes 
+        autoremove: yes 
+        autoclean: yes
