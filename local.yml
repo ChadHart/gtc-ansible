@@ -10,9 +10,4 @@
         state: present
       become: true 
 
-    - name: Ensure Nginx service is running and enabled
-      ansible.builtin.service:
-        name: nginx
-        state: started
-        enabled: true
-      become: true
+    
