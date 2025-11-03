@@ -1,0 +1,13 @@
+---
+- hosts: gtc-collector
+  connection: local
+  gather_facts: true
+
+  tasks:
+    - name: Install cmatrix
+      ansible.builtin.apt:
+        name: cmatrix
+        state: present
+      become: true 
+
+    
