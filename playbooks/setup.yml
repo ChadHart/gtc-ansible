@@ -24,9 +24,11 @@
           # - tftp-hpa
         state: present
 
-    - name: Install Docker using geerlingguy.docker role
-      ansible.builtin.include_role:
-        name: geerlingguy.docker
+  roles:
+    - geerlingguy.docker
+    # - name: Install Docker using geerlingguy.docker role
+    #   ansible.builtin.include_role:
+    #     name: geerlingguy.docker
 
     # - name: Ensure Docker service is running
     #   ansible.builtin.service:
