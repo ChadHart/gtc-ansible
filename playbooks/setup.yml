@@ -27,9 +27,9 @@
   # roles:
   #   - geerlingguy.git
 
-    - name: Install Docker using geerlingguy.docker role
-      ansible.builtin.include_role:
-        name: geerlingguy.docker
+    # - name: Install Docker using geerlingguy.docker role
+    #   ansible.builtin.include_role:
+    #     name: geerlingguy.docker
       # become: false
 
     # - name: Ensure Docker service is running
