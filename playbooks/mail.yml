@@ -1,0 +1,7 @@
+---
+- name: Example Playbook
+  hosts: all
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "Hello from Ansible-pull!"
