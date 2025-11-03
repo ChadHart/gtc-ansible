@@ -2,7 +2,6 @@
 - hosts: localhost
   connection: local
   gather_facts: true
-  become: true
 
   tasks:
     - name: Update apt cache
@@ -23,13 +22,13 @@
           - net-tools
           # - tftp-hpa
         state: present
+        become: true
 
   # roles:
   #   - geerlingguy.git
     - name: Install Docker using geerlingguy.docker role
       ansible.builtin.include_role:
         name: geerlingguy.docker
-        become: false
 
     # - name: Ensure Docker service is running
     #   ansible.builtin.service:
