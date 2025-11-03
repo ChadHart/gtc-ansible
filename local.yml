@@ -21,3 +21,8 @@
           - tftp-hpa
         state: present
       become: true 
+
+    - name: Upgrade Packages
+      ansible.builtin.apt:
+        upgrade: yes
+
