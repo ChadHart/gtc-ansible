@@ -4,10 +4,19 @@
   gather_facts: true
 
   tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+        cache_valid_time: 3600 # 1 hour
+
     - name: Install cmatrix
       ansible.builtin.apt:
         name: cmatrix
         state: present
       become: true 
 
-    
+    - name: neofetch
+      ansible.builtin.apt:
+        name: neofetch
+        state: present
+      become: true  
