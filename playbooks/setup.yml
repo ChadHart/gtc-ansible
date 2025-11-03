@@ -25,5 +25,5 @@
         state: present
 
   roles:
-    - geerlingguy.docker
+    - role: geerlingguy.docker
 
