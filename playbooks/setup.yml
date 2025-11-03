@@ -2,6 +2,7 @@
 - hosts: localhost
   connection: local
   gather_facts: true
+  become: true
 
   tasks:
     - name: Update apt cache
@@ -9,6 +10,14 @@
         update_cache: yes
         # update: yes
         cache_valid_time: 3600    # 1 hour
+
+    - name: Upgrade all packages to their latest version
+      ansible.builtin.apt:
+        name: "*" 
+        state: present
+        upgrade: yes 
+        autoremove: yes 
+        autoclean: yes
 
     - name: Install Binaries
       ansible.builtin.apt:
@@ -21,4 +30,3 @@
           - net-tools
           - tftp-hpa
         state: present
-      become: true 
