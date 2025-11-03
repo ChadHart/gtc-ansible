@@ -10,6 +10,8 @@
         update_cache: yes
         # update: yes
         cache_valid_time: 3600    # 1 hour
+        name: "*" 
+        state: latest
 
     - name: Install Binaries
       ansible.builtin.apt:
