@@ -7,8 +7,7 @@
   tasks:
     - name: Upgrade all packages to their latest version
       ansible.builtin.apt:
+        update_cache: yes
+        cache_valid_time: 3600    # 1 hour
         name: "*" 
-        state: present
-        upgrade: yes 
-        autoremove: yes 
-        autoclean: yes
+        state: latest
