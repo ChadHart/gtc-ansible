@@ -1,5 +1,5 @@
 ---
-- hosts: gtc-collector
+- hosts: all
   connection: local
   gather_facts: true
 
