@@ -12,6 +12,7 @@
         state: latest
 
 - import_playbook: binaries.yml
+- import_playbook: tree.yml
 
   # roles:
   #   - geerlingguy.git

@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Install tree
+      ansible.builtin.apt:
+        name: 
+          - tree
+        state: latest
