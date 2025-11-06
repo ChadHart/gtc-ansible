@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Install Binaries
+      ansible.builtin.apt:
+        name: 
+          - cmatrix
+          # - ansible
+          - git
+          - python3
+          - python3-pip
+          - net-tools
+          - tftp-hpa
+        state: latest
+
+    # - name: Ensure Docker service is running
+    #   ansible.builtin.service:
+    #     name: docker
+    #     state: started
+    #     enabled: true 
