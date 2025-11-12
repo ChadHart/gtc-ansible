@@ -21,7 +21,7 @@ async def scan_networks():
     return nets
 
 async def connect_network(ssid: str, password: str):
-    cmd = ["nmcli", "device", "wifi", "connect", ssid]
+    cmd = ["sudo", "nmcli", "device", "wifi", "connect", ssid]
     if password:
         cmd += ["password", password]
     rc, out, err = await _run(cmd, 30)
